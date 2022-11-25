@@ -1,6 +1,16 @@
 <resources>
     <string name="app_name">CinemaStorage</string>
 
+    <!-- Bottom Navigation -->
+    <string name="nav_list">List</string>
+    <string name="nav_review">Review</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Fragment -->
+    <string name="tv_list">List</string>
+    <string name="tv_review">Review</string>
+    <string name="tv_profile">Profile</string>
+
     <!-- Back Button -->
     <string name="toast_back_pressed">Press the Back button once more to exit</string>
 </resources>
