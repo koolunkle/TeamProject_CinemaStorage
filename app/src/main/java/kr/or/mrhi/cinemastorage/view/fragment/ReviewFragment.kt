@@ -1,29 +1,24 @@
 package kr.or.mrhi.cinemastorage.view.fragment
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import kr.or.mrhi.cinemastorage.databinding.FragmentReviewBinding
+import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import kr.or.mrhi.cinemastorage.R
+import kr.or.mrhi.cinemastorage.databinding.ActivityBoardWriteBinding
 
-class ReviewFragment : Fragment() {
+class ReviewFragment : AppCompatActivity() {
 
-    private var _binding: FragmentReviewBinding? = null
+    private lateinit var binding: ActivityBoardWriteBinding
 
-    private val binding get() = _binding!!
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentReviewBinding.inflate(inflater, container, false)
-        return binding.root
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_board_write)
+
+        binding.writeBtn.setOnClickListener {
+        }
+
+        val title = binding.titleArea.text.toString()
+        val content = binding.contentArea.text.toString()
+       }
     }
-
-    override fun onDestroy() {
-        _binding = null
-        super.onDestroy()
-    }
-
-}
